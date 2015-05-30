@@ -61,6 +61,7 @@
                     }
 
                 }
+                
                 this.email = value;
             }
         }
@@ -68,7 +69,7 @@
         public override string ToString()
         {
             return this.Email == null
-                ? "Name: " + this.Age + " Age: " + this.Age
+                ? "Name: " + this.Name + " Age: " + this.Age
                 : "Name " + this.Name + " Age: " + this.Age + " Email: " + this.Email;
         }
     }
