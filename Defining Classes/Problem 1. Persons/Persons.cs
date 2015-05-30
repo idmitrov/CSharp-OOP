@@ -18,10 +18,10 @@ namespace Problem_1.Persons
     {
         static void Main(string[] args)
         {
-            Person peshoPerson = new Person("Pesho", 24, "pe6o@domain.com");
-			Person goshoPerson = new Person("Gosho", 25);
-            Console.WriteLine(peshoPerson);
-			Console.WriteLine(goshoPerson);	
+    		Person peshoPerson = new Person("Pesho", 24, "pe6o@domain.com");
+		Person goshoPerson = new Person("Gosho", 25);
+            	Console.WriteLine(peshoPerson);
+		Console.WriteLine(goshoPerson);	
         }
     }
 }
