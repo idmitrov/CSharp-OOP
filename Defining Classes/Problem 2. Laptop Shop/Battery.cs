@@ -11,7 +11,7 @@
 
         public Battery() : this("Default", 1, 1, 1) { } //DEFAULT
 
-        public Battery(string batteryType, int batteryCells, int batteryVoltage, double batteryLife)
+        public Battery(string batteryType, int batteryCells, double batteryVoltage, double batteryLife)
         {
             this.BatteryType = batteryType;
             this.BatteryCells = batteryCells;

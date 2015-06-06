@@ -52,7 +52,7 @@
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new NullReferenceException(String.Format("Model {0}", nullOrEmptyValueErr));
+                    throw new ArgumentException(String.Format("Model {0}", nullOrEmptyValueErr));
                 }
                 this.model = value;
             }
