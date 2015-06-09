@@ -6,32 +6,19 @@
 
     public class Path3D
     {
-        private List<Point3D> sequenceOfPoints;
-
         public Path3D(List<Point3D> pathPoints)
         {
             this.SequenceOfPoints = pathPoints;
         }
 
-        public List<Point3D> SequenceOfPoints 
-        {
-            get { return this.sequenceOfPoints; }
-            set
-            {
-                //if (value.Count < 1)
-                //{
-                //    throw new ArgumentException("Path can not be empty");
-                //}
-                this.sequenceOfPoints = value;
-            }
-        }
+        public List<Point3D> SequenceOfPoints { get; set; }
 
         public override string ToString()
         {
             string path = String.Empty;
             int pointIndex = 1;
 
-            foreach (var point in this.sequenceOfPoints)
+            foreach (var point in this.SequenceOfPoints)
             {
                 path += "Point " + pointIndex + " Coordinates " + point + "\r\n";
                 pointIndex++;
