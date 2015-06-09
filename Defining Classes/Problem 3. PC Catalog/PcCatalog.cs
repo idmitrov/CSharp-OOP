@@ -11,18 +11,17 @@
 •	Create several Computer objects, sort them by price, and print them on the console using the created display method.
 */
 
-using System.Collections.Generic;
-using System.Linq;
-
 namespace Problem_3.PC_Catalog
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
     class PcCatalog
     {
         static void Main()
         {
-            //DESKTOP SPECS
+            //DESKTOP COMPONENTS
             var desktopComponents = new List<Component>()
             {
                 new Component("Intel core i7", 499.99M, "Intel 3rd Generation CPU"),
@@ -36,7 +35,7 @@ namespace Problem_3.PC_Catalog
                 new Component("Microsoft standart keyboard", 45, "Wireless keyboard")
             };
 
-            //LAPTOP SPECS
+            //LAPTOP COMPONENTS
             var laptopComponents = new List<Component>()
             {
                 new Component("Intel core i7", 499.99M, "Intel 3rd Generation CPU"),
@@ -48,6 +47,7 @@ namespace Problem_3.PC_Catalog
                 new Component("Synaptics Touchpad", 40, "Touchpad")
             };
 
+            //UILTRABOOK COMPONENTS
             var ultraBookComponents = new List<Component>()
             {
                 new Component("Intel core i3", 299.99M, "Intel 3rd Generation CPU"),
@@ -59,6 +59,7 @@ namespace Problem_3.PC_Catalog
                 new Component("Synaptics Touchpad", 40, "Touchpad")
             };
 
+            //PC CATALOG
             var pcCatalog = new List<Computer>()
             {
                new Computer("Desktop PC", desktopComponents),
@@ -66,7 +67,8 @@ namespace Problem_3.PC_Catalog
                new Computer("Ultrabook", ultraBookComponents)
             };
 
-            foreach (var device in pcCatalog.OrderBy(x => x.Price()))
+            //PRINT ALL PC's FROM THE PC CATALOG (ORDERED BY THE PRICE)
+            foreach (var device in pcCatalog.OrderBy(x => x.Price))
             {
                 Console.WriteLine(device);
             }

@@ -5,17 +5,20 @@ namespace Problem_3.PC_Catalog
 
     class Component : Constants
     {
+        //FIELDS
         private string name;
         private decimal price;
         private string details;
 
+        //CONSTRUCTOR
         public Component(string name, decimal price, string details = null)
         {
             this.Name = name;
             this.Price = price;
-            this.Details = details;
+            this.Details = details; //(OPTIONAL)
         }
 
+        //PROP NAME
         public string Name
         {
             get { return this.name; }
@@ -30,6 +33,7 @@ namespace Problem_3.PC_Catalog
             }   
         }
 
+        //PROP PRICE
         public decimal Price
         {
             get { return this.price; }
@@ -44,6 +48,7 @@ namespace Problem_3.PC_Catalog
             }
         }
 
+        //PROP DETAILS (OPTIONAL)
         public string Details
         {
             get { return this.details; }
