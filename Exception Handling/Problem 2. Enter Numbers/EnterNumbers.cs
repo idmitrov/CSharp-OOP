@@ -13,7 +13,6 @@ namespace Problem_2.Enter_Numbers
     {
         // ERRORS (CLIENT)
         private const string NullArgumentErr = "START/END cannot be NULL.";
-
         private const string InvalidArgumentFormatErr = "START/END must be a valid integer number.";
         private const string OutOfRangeArgumentErr = "Input was out of range.";
 
@@ -38,6 +37,7 @@ namespace Problem_2.Enter_Numbers
                 throw new ArgumentOutOfRangeException();
             }
 
+            //GET INPUT
             var input = Console.ReadLine();
 
             // IF INPUT IS NULL -> THROW EXCEPTION
@@ -46,9 +46,10 @@ namespace Problem_2.Enter_Numbers
                 throw new ArgumentNullException();
             }
 
+            //INIT NUMBER
             int number;
 
-            // IF INPUT IS NOT PARSABLE TO INTEGER NUMBER -> THROW EXCEPTION
+            // IF INPUT IS NOT PARSABLE TO INTEGER NUMBER (number) -> THROW EXCEPTION
             if (!int.TryParse(input, out number))
             {
                 throw new FormatException();
@@ -60,6 +61,7 @@ namespace Problem_2.Enter_Numbers
                 throw new ArgumentOutOfRangeException();
             }
 
+            // IF NUMBER IS THE NUMBER BEFORE END -> THROW EXCEPTION
             if (number + 1 > end)
             {
                 throw new OverflowException();
@@ -69,7 +71,7 @@ namespace Problem_2.Enter_Numbers
             return number;
         }
 
-        // INIT RANGES
+        // VALIDATE RANGES
         public static void ValidateRanges(int start, int end, int maxEntries)
         {
             // IF RANGES INIT IS NOT VALID (DEVELOPER)
