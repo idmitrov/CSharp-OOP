@@ -21,7 +21,7 @@ namespace Problem_2.Animals
     {
         static void Main(string[] args)
         {
-            // Animals
+            // ANIMALS
             var animals = new Animal[]
             {
                 new Dog("Cesar", 7, "Male"),
@@ -43,6 +43,7 @@ namespace Problem_2.Animals
             int frogsAvgAge = (int)animals.OfType<Frog>().Average(animal => animal.Age);
             int catsAvgAge = (int)animals.OfType<Cat>().Average(animal => animal.Age);
 
+            // PRINT AVG AGE FOR EACH ANIMAL
             Console.WriteLine("Dogs avg age: {0}\r\nCats avg age: {1}\r\nFrogs avg age: {2}\r\n",
                 dogsAvgAge, catsAvgAge, frogsAvgAge);
         }
